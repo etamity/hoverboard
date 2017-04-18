@@ -16,13 +16,13 @@
     "backgroundColor": "#F57C00"
   },
   "firebase": {
-    "name": "hoverboard-experimental",
-    "domain": "hoverboard-experimental.firebaseapp.com",
-    "database": "https://hoverboard-experimental.firebaseio.com",
-    "api": "AIzaSyALDa2D7CMhK_wt2VkET1MaJuQXYVUJd2I",
+    "name": "uciachina",
+    "domain": "uciachina-370c7.firebaseapp.com",
+    "database": "https://uciachina-370c7.firebaseio.com/",
+    "api": "AIzaSyAPyotM_nTSrDS_hXzyY9a8D1MJ6ncViSk",
     "userSessionsPath": "/userSessions",
     "ratingsPath": "/ratings",
-    "indexedDbSession": "hoverboard"
+    "indexedDbSession": "uciachina"
   },
   "mailchimp": {
     "url": "https://gdg.us11.list-manage.com/subscribe/post?u=b7e853a79164ddfdbda3ed77b&amp;id=7993e39fbe",
