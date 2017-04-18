@@ -26,7 +26,7 @@ window.debugLog = function debugLog(var_args) {
   }
 };
 
-HOVERBOARD.Util = HOVERBOARD.Util || (function () {
+REALMAPP.Util = REALMAPP.Util || (function () {
 
 
     'use strict';
@@ -184,7 +184,7 @@ HOVERBOARD.Util = HOVERBOARD.Util || (function () {
       // relevant, so grab those.
       var location = (error && typeof error.stack === 'string') ?
         error.stack.slice(-500) : 'Unknown Location';
-      HOVERBOARD.Analytics.trackError(location, error);
+      REALMAPP.Analytics.trackError(location, error);
     };
 
     /**

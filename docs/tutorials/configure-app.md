@@ -1,6 +1,6 @@
 # Configure
 
-The most important file of configuration is `data/hoverboard.config.json`
+The most important file of configuration is `data/realmapp.config.json`
 which looks like:
 
 ```
@@ -86,7 +86,7 @@ window.ENV = 'dev';
 ```
 
 If you don't need some pages, don't forget to remove them (or comment out)
-in `hoverboard-app.html`
+in `realmapp-app.html`
 
 ```
 <neon-animated-pages attr-for-selected="name">
@@ -135,7 +135,7 @@ Read [full documentation](http://chrissimpkins.github.io/tweetledee/) on the off
 
 # Next steps
 
-Now your Hoverboard is up configured, learn how to integrate [firebase][firebase] in your app, [style app][style app] and [deploy][deploy].
+Now your realmapp is up configured, learn how to integrate [firebase][firebase] in your app, [style app][style app] and [deploy][deploy].
 
 [AppLocalizeBehavior]: https://elements.polymer-project.org/elements/app-localize-behavior
 [localization resources]: /data/resources.json

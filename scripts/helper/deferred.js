@@ -26,7 +26,7 @@ window.debugLog = function debugLog(var_args) {
   }
 };
 
-HOVERBOARD.Deferred = HOVERBOARD.Deferred || (function () {
+REALMAPP.Deferred = REALMAPP.Deferred || (function () {
     'use strict';
 
     /**

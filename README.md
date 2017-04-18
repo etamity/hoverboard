@@ -1,10 +1,10 @@
 ![preview-web](https://cloud.githubusercontent.com/assets/2954281/17777476/5dbbbe1c-6569-11e6-9cc4-77185ae9bf92.png)
 
-# Project Hoverboard
+# Project realmapp
 
-[![Join the chat at https://gitter.im/gdg-x/hoverboard](https://badges.gitter.im/gdg-x/hoverboard.svg)](https://gitter.im/gdg-x/hoverboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/gdg-x/realmapp](https://badges.gitter.im/gdg-x/realmapp.svg)](https://gitter.im/gdg-x/realmapp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-> Project Hoverboard is the next generation conference website template after
+> Project realmapp is the next generation conference website template after
 [Project Zeppelin](https://github.com/gdg-x/zeppelin) and more optimized
 version - [Project Zeppelin-Grunt](https://github.com/gdg-x/zeppelin-grunt).
 
@@ -13,7 +13,7 @@ from [GDG Lviv](http://lviv.gdg.org.ua/).
 
 > *Do you :heart: it?* Show your support - please, :star: the project.
 
-:zap: [Live demo](https://hoverboard-dev.firebaseapp.com/)
+:zap: [Live demo](https://realmapp-dev.firebaseapp.com/)
 
 ### Features
 :white_check_mark: Polymer  
@@ -39,13 +39,13 @@ If you don't want to bother with the dependencies, you can use the docker contai
 
 Build the docker image:
 
-    docker build -t hoverboard .
+    docker build -t realmapp .
 
 and execute the commands associated to the docker env in the following documentation:
 
 :book: Read more in [docker docs](/docs/tutorials/docker.md).
 
-:point_right: **[Fork](https://github.com/gdg-x/hoverboard/fork) this repository** and clone it locally.
+:point_right: **[Fork](https://github.com/gdg-x/realmapp/fork) this repository** and clone it locally.
 
 ##### Install dependencies
 
@@ -53,7 +53,7 @@ and execute the commands associated to the docker env in the following documenta
     
 Or you can install with Docker container: 
      
-    docker run -v "$PWD":/app hoverboard npm install 
+    docker run -v "$PWD":/app realmapp npm install 
 
 ##### Start the development server
 
@@ -64,7 +64,7 @@ routing for the app:
     
 Or you can serve Docker container:
 
-    docker run -v "$PWD":/app hoverboard
+    docker run -v "$PWD":/app realmapp
 
 :book: Read more in [setup docs](/docs/tutorials/set-up.md).
 
@@ -80,14 +80,14 @@ The minified files are output to the `build`.
 
 Or you can build in Docker container:
 
-    docker run -v "$PWD":/app hoverboard npm run build
+    docker run -v "$PWD":/app realmapp npm run build
 
 :book: Read more in [deploy docs](/docs/tutorials/deploy.md).   
 
 ### Updating
 Here is a git workflow for updating your fork (or downloaded copy) to the latest version:
 ```
-git remote add upstream https://github.com/gdg-x/hoverboard.git
+git remote add upstream https://github.com/gdg-x/realmapp.git
 git fetch upstream
 git merge upstream/master # OR git merge upstream/develop
 # resolve the merge conflicts in your editor
@@ -125,11 +125,11 @@ pull request, so we can include you in this list.
 :x: ES2015  
 :x: Accessibility  
 :x: Unit/Integration Tests  
-:point_right: __Propose your feature with [creating an issue](https://github.com/gdg-x/hoverboard/issues/new)__
+:point_right: __Propose your feature with [creating an issue](https://github.com/gdg-x/realmapp/issues/new)__
 
 ### Contributing
 
-Project Hoverboard is still under development, and it is open for contributions.
+Project realmapp is still under development, and it is open for contributions.
 Feel free to send PR. If you have any questions, feel free to contact
 [Oleh Zasadnyy](https://plus.google.com/+OlehZasadnyy).
 
@@ -146,7 +146,7 @@ Feel free to send PR. If you have any questions, feel free to contact
 
 
 ### Contributors :sparkles:
-See [list of contributors](https://github.com/gdg-x/hoverboard/graphs/contributors).
+See [list of contributors](https://github.com/gdg-x/realmapp/graphs/contributors).
 
 __Maintainer:__ [Oleh Zasadnyy](https://github.com/ozasadnyy) and [Sophie Huts](https://github.com/sophieH29).
 
@@ -156,5 +156,5 @@ __Maintainer:__ [Oleh Zasadnyy](https://github.com/ozasadnyy) and [Sophie Huts](
 
 ### License
 
-Project is published under the [MIT license](https://github.com/gdg-x/hoverboard/blob/master/LICENSE.md).  
+Project is published under the [MIT license](https://github.com/gdg-x/realmapp/blob/master/LICENSE.md).  
 Feel free to clone and modify repo as you want, but don't forget to add reference to authors :)

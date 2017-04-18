@@ -30,7 +30,7 @@
 <link rel="import" href="pages/home-page.html">
 
 
-<dom-module id="hoverboard-app">
+<dom-module id="realmapp-app">
 
   <template>
 
@@ -220,14 +220,14 @@
       'use strict';
 
       // performance logging
-      window.performance && performance.mark && performance.mark('hoverboard-app - before register');
+      window.performance && performance.mark && performance.mark('realmapp-app - before register');
 
       Polymer({
 
-        is: 'hoverboard-app',
+        is: 'realmapp-app',
 
         behaviors: [
-          HOVERBOARD.UtilsBehavior
+          REALMAPP.UtilsBehavior
         ],
 
         properties: {
@@ -266,7 +266,7 @@
 
         ready: function () {
           Polymer.RenderStatus.afterNextRender(this, function () {
-            HOVERBOARD.ServiceWorkerRegistration.register();
+            REALMAPP.ServiceWorkerRegistration.register();
             this.importHref(this.resolveUrl('pages/schedule-page.html'), null, null, true);
             this.importHref(this.resolveUrl('pages/speakers-page.html'), null, null, true);
             this.importHref(this.resolveUrl('pages/blog-page.html'), null, null, true);
@@ -317,7 +317,7 @@
           Polymer.AppLayout.scroll({
             top: 0,
             behavior: 'smooth',
-            target: HOVERBOARD.Elements.Scroller
+            target: REALMAPP.Elements.Scroller
           });
           e.target.blur();
         },

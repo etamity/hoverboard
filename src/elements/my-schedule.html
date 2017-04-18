@@ -130,8 +130,8 @@
         is: 'my-schedule',
 
         behaviors: [
-          HOVERBOARD.CascadedBehavior,
-          HOVERBOARD.UtilsBehavior
+          REALMAPP.CascadedBehavior,
+          REALMAPP.UtilsBehavior
         ],
 
         properties: {
@@ -163,7 +163,7 @@
             this.set('app.user.sessions.' + id, null);
           }
 
-          HOVERBOARD.Elements.Template.$.toast.showMessage('{$ removedFromSchedule $}');
+          REALMAPP.Elements.Template.$.toast.showMessage('{$ removedFromSchedule $}');
         },
 
         _splitText: function (text, divider, index) {

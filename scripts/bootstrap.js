@@ -23,7 +23,7 @@
 
   function logRejectedPromises() {
     unhandledRejections.forEach(function (reason) {
-      HOVERBOARD.Analytics.trackError('UnhandledPromiseRejection', reason);
+      REALMAPP.Analytics.trackError('UnhandledPromiseRejection', reason);
     });
 
     unhandledRejections = [];
@@ -82,8 +82,8 @@
       document.head.appendChild(script);
     }
 
-    if (!(HOVERBOARD.Util.getChromeVersion() &&
-      HOVERBOARD.Util.getChromeVersion() >= 46 || HOVERBOARD.Util.getFirefoxVersion() && HOVERBOARD.Util.getFirefoxVersion() >= 40)) {
+    if (!(REALMAPP.Util.getChromeVersion() &&
+      REALMAPP.Util.getChromeVersion() >= 46 || REALMAPP.Util.getFirefoxVersion() && REALMAPP.Util.getFirefoxVersion() >= 40)) {
       var parent = document.querySelector('body');
       var swScript = document.querySelector('#sw-registration');
       var polyfillScript = document.createElement('script');
@@ -96,21 +96,21 @@
   }
 
   window.addEventListener('offline', function () {
-    if (HOVERBOARD.Elements && HOVERBOARD.Elements.Template.$.toast) {
-      HOVERBOARD.Elements.Template.$.toast.showMessage(
+    if (REALMAPP.Elements && REALMAPP.Elements.Template.$.toast) {
+      REALMAPP.Elements.Template.$.toast.showMessage(
         'You can still work offline.');
     }
   });
 
   // See https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/advanced
   window.addEventListener('beforeinstallprompt', function (event) {
-    HOVERBOARD.Analytics.trackEvent('installprompt', 'fired');
+    REALMAPP.Analytics.trackEvent('installprompt', 'fired');
 
     event.userChoice.then(function (choiceResult) {
       // choiceResult.outcome will be 'accepted' or 'dismissed'.
       // choiceResult.platform will be 'web' or 'android' if the prompt was
       // accepted, or '' if the prompt was dismissed.
-      HOVERBOARD.Analytics.trackEvent('installprompt', choiceResult.outcome,
+      REALMAPP.Analytics.trackEvent('installprompt', choiceResult.outcome,
         choiceResult.platform);
     });
   });
@@ -121,7 +121,7 @@
     // async. It's a noop and its callback gets invoked right away. Therefore,
     // this shouldn't slow anything down.
     lazyLoadWCPolyfillsIfNecessary(function () {
-      HOVERBOARD.Elements.init();
+      REALMAPP.Elements.init();
     });
   }
 

@@ -107,7 +107,7 @@
         behaviors: [
           Polymer.PaperDialogBehavior,
           Polymer.NeonAnimationRunnerBehavior,
-          HOVERBOARD.UtilsBehavior
+          REALMAPP.UtilsBehavior
         ],
 
         properties: {
@@ -135,8 +135,8 @@
         _speakerChanged: function () {
           var generatedClass = this._generateClass(this.speaker.tags[0]);
           this.customStyle['--paper-scroll-header-panel-color'] = 'var(--' + generatedClass + ')';
-          this._previousBrowserColor = HOVERBOARD.Util.getMetaThemeColor();
-          HOVERBOARD.Util.setMetaThemeColor(this.getComputedStyleValue('--' + generatedClass));
+          this._previousBrowserColor = REALMAPP.Util.getMetaThemeColor();
+          REALMAPP.Util.setMetaThemeColor(this.getComputedStyleValue('--' + generatedClass));
 
           if (this.app.isPhoneSize) {
             this.$.scrollHeaderPanel.$.headerBg.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 0.4) -10%, rgba(0, 0, 0, 0.1) 50%), url(' + this.speaker.photoUrl + ') 0 / cover no-repeat';
@@ -153,11 +153,11 @@
             this.$.scrollHeaderPanel.scroll(1, true);
             this.$.scrollHeaderPanel.notifyResize();
           });
-          HOVERBOARD.Analytics.trackEvent('speaker', 'open details', this.speaker.name);
+          REALMAPP.Analytics.trackEvent('speaker', 'open details', this.speaker.name);
         },
 
         _renderClosed: function () {
-          HOVERBOARD.Util.setMetaThemeColor(this._previousBrowserColor);
+          REALMAPP.Util.setMetaThemeColor(this._previousBrowserColor);
           this.backdropElement.close();
           this.playAnimation('exit');
         },

@@ -226,9 +226,9 @@
           Polymer.PaperDialogBehavior,
           Polymer.NeonAnimationRunnerBehavior,
           Polymer.AppNetworkStatusBehavior,
-          HOVERBOARD.UtilsBehavior,
-          HOVERBOARD.ShareBehavior,
-          HOVERBOARD.MyScheduleBehavior
+          REALMAPP.UtilsBehavior,
+          REALMAPP.ShareBehavior,
+          REALMAPP.MyScheduleBehavior
         ],
 
         properties: {
@@ -257,7 +257,7 @@
         },
 
         _openVideo: function () {
-          HOVERBOARD.Elements.Template.openVideo(this.session.title, this.session.videoId, true);
+          REALMAPP.Elements.Template.openVideo(this.session.title, this.session.videoId, true);
         },
 
         _concatArray: function (array) {
@@ -277,8 +277,8 @@
           }
           var generatedClass = this._generateClass(this.session.mainTag);
           this.customStyle['--paper-scroll-header-panel-color'] = 'var(--' + generatedClass + ')';
-          this._previousBrowserColor = HOVERBOARD.Util.getMetaThemeColor();
-          HOVERBOARD.Util.setMetaThemeColor(this.getComputedStyleValue('--' + generatedClass));
+          this._previousBrowserColor = REALMAPP.Util.getMetaThemeColor();
+          REALMAPP.Util.setMetaThemeColor(this.getComputedStyleValue('--' + generatedClass));
           this.updateStyles();
         },
 
@@ -291,11 +291,11 @@
             this.$.scrollHeaderPanel.scrollToTop(true);
             this.$.scrollHeaderPanel.notifyResize();
           });
-          HOVERBOARD.Analytics.trackEvent('session', 'open details', this.session.title);
+          REALMAPP.Analytics.trackEvent('session', 'open details', this.session.title);
         },
 
         _renderClosed: function () {
-          HOVERBOARD.Util.setMetaThemeColor(this._previousBrowserColor);
+          REALMAPP.Util.setMetaThemeColor(this._previousBrowserColor);
           this.backdropElement.close();
           this.playAnimation('exit');
         },
@@ -317,12 +317,12 @@
 
         _rate: function () {
           if (!this.online) {
-            HOVERBOARD.Elements.Template.$.toast.showMessage('{$ offlineMessage $}');
+            REALMAPP.Elements.Template.$.toast.showMessage('{$ offlineMessage $}');
           } else if (!this.app.user) {
             var signIn = function () {
-              HOVERBOARD.Elements.Template.signIn();
+              REALMAPP.Elements.Template.signIn();
             };
-            HOVERBOARD.Elements.Template.$.toast.showMessage(
+            REALMAPP.Elements.Template.$.toast.showMessage(
               '{$ youShouldSignInRating $}', signIn, '{$ signIn $}');
           }
         },

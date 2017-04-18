@@ -21,8 +21,9 @@ const config = {
   },
   swPrecacheConfigPath: './sw-precache-config.js',
   templateData: [
-    'data/hoverboard.config',
-    'data/resources'
+    'data/realmapp.config',
+    'data/resources',
+    'data/meta'
   ],
   tempDirectory: '.temp'
 };
@@ -140,7 +141,7 @@ gulp.task('default', build);
 
 gulp.task('serve', gulp.series(compileTemplate, () => {
   browserSync.init({
-    logPrefix: 'Hoverboard',
+    logPrefix: 'realmapp',
     notify: false,
     server: {
       baseDir: [config.tempDirectory, './'],

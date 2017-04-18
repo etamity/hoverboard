@@ -184,17 +184,17 @@
         },
 
         _openVideo: function () {
-          HOVERBOARD.Elements.Template.openVideo('{$ pages.home.headerSettings.video.title $}',
+          REALMAPP.Elements.Template.openVideo('{$ pages.home.headerSettings.video.title $}',
             '{$ pages.home.headerSettings.video.youtubeId $}', true);
-          HOVERBOARD.Analytics.trackEvent('video', 'watch', '{$ pages.home.headerSettings.video.title $}');
+          REALMAPP.Analytics.trackEvent('video', 'watch', '{$ pages.home.headerSettings.video.title $}');
         },
 
         _scrollToTickets: function () {
-          HOVERBOARD.Analytics.trackEvent('ticket', 'buy_click', 'header');
+          REALMAPP.Analytics.trackEvent('ticket', 'buy_click', 'header');
           Polymer.AppLayout.scroll({
-            top: HOVERBOARD.Elements.Tickets.getBoundingClientRect().top,
+            top: REALMAPP.Elements.Tickets.getBoundingClientRect().top,
             behavior: 'smooth',
-            target: HOVERBOARD.Elements.Scroller
+            target: REALMAPP.Elements.Scroller
           });
         }
 

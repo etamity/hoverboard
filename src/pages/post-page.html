@@ -189,10 +189,10 @@
         is: 'post-page',
 
         behaviors: [
-          HOVERBOARD.PageBehavior,
-          HOVERBOARD.CascadedBehavior,
-          HOVERBOARD.UtilsBehavior,
-          HOVERBOARD.ShareBehavior
+          REALMAPP.PageBehavior,
+          REALMAPP.CascadedBehavior,
+          REALMAPP.UtilsBehavior,
+          REALMAPP.ShareBehavior
         ],
 
         properties: {
@@ -238,7 +238,7 @@
 
         _postLoaded: function () {
           this.postId = null;
-          HOVERBOARD.Analytics.trackEvent('blog', 'open post', this._post.title);
+          REALMAPP.Analytics.trackEvent('blog', 'open post', this._post.title);
         },
 
         _updateHeaderSettings: function () {

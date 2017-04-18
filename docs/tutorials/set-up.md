@@ -1,14 +1,14 @@
 # Set up
 
 Follow the instructions below to install, build, and run the
-Project Hoverboard locally in less than 15 minutes.
+Project realmapp locally in less than 15 minutes.
 
 Or you may use [Docker container for development](docker.md)
 
-## Install the Hoverboard and dependencies
+## Install the realmapp and dependencies
 
 1.  Install [Node.js](https://nodejs.org/) (`node`) version 4 or above.
-    Node.js includes Node Package Manager (`npm`) by default. The Hoverboard
+    Node.js includes Node Package Manager (`npm`) by default. The realmapp
     uses `npm` for Polymer CLI.
 
 1.  Verify that you're running `node` version 4 or above and `npm`
@@ -20,11 +20,11 @@ Or you may use [Docker container for development](docker.md)
         npm -v
         2.15.8
 
-1.  [Fork](https://github.com/gdg-x/hoverboard/fork) this repository
+1.  [Fork](https://github.com/gdg-x/realmapp/fork) this repository
 
 1.  Clone it locally.
 
-1. `cd` into the base directory of your Hoverboard project.
+1. `cd` into the base directory of your realmapp project.
 
 1.  Install the application dependencies.
 
@@ -70,9 +70,9 @@ The diagram below is a brief summary of the directories within the PSK.
 
 ## Build and serve
 
-The Hoverboard is ready to be built and ran locally.
+The realmapp is ready to be built and ran locally.
 
-1. `cd` into the base directory of your Hoverboard project.
+1. `cd` into the base directory of your realmapp project.
 
 1.  Serve the app locally.
 
@@ -85,7 +85,7 @@ The Hoverboard is ready to be built and ran locally.
 
 ## Next steps
 
-Now that your Hoverboard is up and running, learn how to [configure 
+Now that your realmapp is up and running, learn how to [configure 
 app](configure-app.md) for your needs, or how to [deploy the app to the
 web](deploy.md).
 

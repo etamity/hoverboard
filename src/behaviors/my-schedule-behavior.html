@@ -5,9 +5,9 @@
     'use strict';
 
     /**
-     * @polymerBehavior HOVERBOARD.MyScheduleBehavior
+     * @polymerBehavior REALMAPP.MyScheduleBehavior
      */
-    HOVERBOARD.MyScheduleBehavior = {
+    REALMAPP.MyScheduleBehavior = {
 
       properties: {
         app: {
@@ -21,15 +21,15 @@
         e.preventDefault();
 
         if (!this.online) {
-          HOVERBOARD.Elements.Template.$.toast.showMessage('{$ offlineMessage $}');
+          REALMAPP.Elements.Template.$.toast.showMessage('{$ offlineMessage $}');
           return;
         }
 
         if (!this.app.user) {
           var signIn = function () {
-            HOVERBOARD.Elements.Template.signIn();
+            REALMAPP.Elements.Template.signIn();
           };
-          HOVERBOARD.Elements.Template.$.toast.showMessage(
+          REALMAPP.Elements.Template.$.toast.showMessage(
             '{$ youShouldSignInSessions $}', signIn, '{$ signIn $}');
           return;
         }
@@ -38,13 +38,13 @@
 
         if (this.app.user.sessions && this.app.user.sessions[id]) {
           this.set('app.user.sessions.' + id, null);
-          HOVERBOARD.Elements.Template.$.toast.showMessage('{$ removedFromSchedule $}');
+          REALMAPP.Elements.Template.$.toast.showMessage('{$ removedFromSchedule $}');
         } else {
           if (!this.app.user.sessions) {
             this.app.user.sessions = {};
           }
           this.set('app.user.sessions.' + id, true);
-          HOVERBOARD.Elements.Template.$.toast.showMessage('{$ addedToSchedule $}');
+          REALMAPP.Elements.Template.$.toast.showMessage('{$ addedToSchedule $}');
         }
       },
 

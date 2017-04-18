@@ -49,7 +49,7 @@ Additionally it's possible to edit/add tags which is used on speakers and sessio
 
 ### Headers
 
-Color and images for header can be configured via `data/hoverboard.config.json`
+Color and images for header can be configured via `data/realmapp.config.json`
 in `pages` object. For instance:
 ```
 "pages": {
@@ -67,7 +67,7 @@ in `pages` object. For instance:
 
 ### Web app
 
-Edit Web app colors in `hoverboard.config.json`
+Edit Web app colors in `realmapp.config.json`
 ```
   "webapp": {
       "shortName": "DevFest",

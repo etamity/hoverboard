@@ -98,11 +98,11 @@
         is: 'tickets-block',
 
         ready: function () {
-          HOVERBOARD.Elements.Tickets = this
+          REALMAPP.Elements.Tickets = this
         },
 
         _trackBuyClick: function (e) {
-          HOVERBOARD.Analytics.trackEvent('ticket', 'buy_click', e.currentTarget.href);
+          REALMAPP.Analytics.trackEvent('ticket', 'buy_click', e.currentTarget.href);
         }
 
       });

@@ -164,7 +164,7 @@
         is: 'featured-videos',
 
         behaviors: [
-          HOVERBOARD.UtilsBehavior
+          REALMAPP.UtilsBehavior
         ],
 
         listeners: {
@@ -227,9 +227,9 @@
 
         _playVideo: function (e) {
           var presenters = e.model.video.speakers ? (' by ' + e.model.video.speakers) : '';
-          HOVERBOARD.Elements.Template.openVideo(e.model.video.title + presenters, e.model.video.youtubeId, true);
+          REALMAPP.Elements.Template.openVideo(e.model.video.title + presenters, e.model.video.youtubeId, true);
 
-          HOVERBOARD.Analytics.trackEvent('video', 'watch', 'featured video ' + e.model.video.title);
+          REALMAPP.Analytics.trackEvent('video', 'watch', 'featured video ' + e.model.video.title);
         },
 
         shiftContentLeft: function () {

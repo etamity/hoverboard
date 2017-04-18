@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-HOVERBOARD.Elements = (function () {
+REALMAPP.Elements = (function () {
   'use strict';
 
   function init() {
-    HOVERBOARD.Elements.Template = document.getElementById('happ');
+    REALMAPP.Elements.Template = document.getElementById('happ');
   }
 
   return {

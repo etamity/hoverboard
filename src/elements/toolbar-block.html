@@ -204,7 +204,7 @@
         is: 'toolbar-block',
 
         behaviors: [
-          HOVERBOARD.UtilsBehavior
+          REALMAPP.UtilsBehavior
         ],
 
         properties: {
@@ -218,15 +218,15 @@
         ],
 
         togglePanel: function () {
-          HOVERBOARD.Elements.Template.toggleDrawer();
+          REALMAPP.Elements.Template.toggleDrawer();
         },
 
         signIn: function () {
-          HOVERBOARD.Elements.Template.signIn();
+          REALMAPP.Elements.Template.signIn();
         },
 
         signOut: function () {
-          HOVERBOARD.Elements.Template.signOut();
+          REALMAPP.Elements.Template.signOut();
         },
 
         _stylesChanged: function (headerSettings) {
@@ -238,7 +238,7 @@
         },
 
         _trackBuyClick: function () {
-          HOVERBOARD.Analytics.trackEvent('ticket', 'buy_click', 'toolbar');
+          REALMAPP.Analytics.trackEvent('ticket', 'buy_click', 'toolbar');
         }
 
       });
