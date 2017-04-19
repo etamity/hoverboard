@@ -23,7 +23,8 @@ const config = {
   swPrecacheConfigPath: './sw-precache-config.js',
   templateData: [
     'data/realmapp.config',
-    'data/resources'
+    'data/resources',
+    'data/meta'
   ],
   tempDirectory: '.temp'
 };

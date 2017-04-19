@@ -1,6 +1,6 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/realmapp-app.html",
+  "shell": "src/realm-app.html",
   "fragments": [
   ],
   "sources": [
