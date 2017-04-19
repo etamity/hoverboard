@@ -69,7 +69,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-  <link rel="import" href="/src/hoverboard-app.html">
+  <link rel="import" href="/src/realm-app.html">
 
   <style>
 
@@ -83,7 +83,7 @@
     }
 
     /* styling for render while resources are loading */
-    hoverboard-app[unresolved] {
+    realm-app[unresolved] {
       padding: 0 16px;
       display: block;
       min-height: 101vh;
@@ -100,7 +100,7 @@
 </head>
 <body>
 
-<hoverboard-app unresolved>{$ title $}</hoverboard-app>
+<realm-app unresolved>{$ title $}</realm-app>
 
 <script>
   window.performance && performance.mark && performance.mark('index.html');

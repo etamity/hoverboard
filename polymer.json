@@ -1,6 +1,6 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/hoverboard-app.html",
+  "shell": "src/realmapp-app.html",
   "fragments": [
   ],
   "sources": [

@@ -7,6 +7,7 @@
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
 <link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
 <link rel="import" href="../bower_components/app-route/app-location.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 
@@ -21,10 +22,10 @@
 <link rel="import" href="redux-store.html">
 <link rel="import" href="elements/shared-styles.html">
 <link rel="import" href="elements/flex-layout-attr.html">
-<link rel="import" href="elements/hoverboard-icons.html">
+<link rel="import" href="elements/realm-icons.html">
 
 
-<dom-module id="hoverboard-app">
+<dom-module id="realm-app">
 
   <template>
 
@@ -186,10 +187,10 @@
 
   <script>
 
-    class HoverboardApp extends ReduxMixin(Polymer.Element) {
+    class RealmApp extends ReduxMixin(Polymer.Element) {
 
       static get is() {
-        return 'hoverboard-app';
+        return 'realm-app';
       }
 
       static get properties() {
@@ -203,12 +204,12 @@
 
       constructor() {
         super();
-        window.performance && performance.mark && performance.mark('hoverboard-app.created');
+        window.performance && performance.mark && performance.mark('realm-app.created');
       }
 
       ready() {
         super.ready();
-        console.log('Hoverboard v2 is ready!');
+        console.log('Realm App v2 is ready!');
         this.removeAttribute('unresolved');
         this._ensureLazyLoaded();
       }
@@ -235,7 +236,7 @@
       }
     }
 
-    customElements.define(HoverboardApp.is, HoverboardApp);
+    customElements.define(RealmApp.is, RealmApp);
 
   </script>
 

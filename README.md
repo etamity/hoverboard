@@ -7,7 +7,7 @@
 
 > *Do you :heart: it?* Show your support - please, :star: the project.
 
-:zap: [Live demo](https://hoverboard-v2-dev.firebaseapp.com/)
+:zap: [Live demo](https://realmapp-v2-dev.firebaseapp.com/)
  
 
 ### Setup
@@ -19,13 +19,13 @@ If you don't want to bother with the dependencies, you can develop in the docker
 
 Build the docker image :
 
-    docker build -t hoverboard .
+    docker build -t realmapp .
 
 and execute the commands associated to the docker env in the following documentation
 
 :book: Read more in [docker docs](/docs/tutorials/docker.md).
 
-:point_right: **[Fork](https://github.com/gdg-x/hoverboard/fork) this repository** and clone it locally.
+:point_right: **[Fork](https://github.com/gdg-x/realmapp/fork) this repository** and clone it locally.
 
 ##### Install dependencies
 
@@ -33,7 +33,7 @@ and execute the commands associated to the docker env in the following documenta
     
 Or you can install with Docker container: 
      
-    docker run -v "$PWD":/app hoverboard npm install 
+    docker run -v "$PWD":/app realmapp npm install 
 
 ##### Start the development server
 
@@ -44,7 +44,7 @@ routing for the app:
     
 Or you can serve Docker container:
 
-    docker run -v "$PWD":/app hoverboard
+    docker run -v "$PWD":/app realmapp
 
 :book: Read more in [setup docs](/docs/tutorials/set-up.md).
 
@@ -60,13 +60,13 @@ The minified files are output to the `build`.
 
 Or you can build in Docker container:
 
-    docker run -v "$PWD":/app hoverboard npm run build
+    docker run -v "$PWD":/app realmapp npm run build
 
 :book: Read more in [deploy docs](/docs/tutorials/deploy.md).   
 
 
 ### Contributors :sparkles:
-See [list of contributors](https://github.com/gdg-x/hoverboard/graphs/contributors).
+See [list of contributors](https://github.com/gdg-x/realmapp/graphs/contributors).
 
 __Maintainer:__ [Oleh Zasadnyy](https://github.com/ozasadnyy) and [Sophie Huts](https://github.com/sophieH29).
 
@@ -76,5 +76,5 @@ __Maintainer:__ [Oleh Zasadnyy](https://github.com/ozasadnyy) and [Sophie Huts](
 
 ### License
 
-Project is published under the [MIT license](https://github.com/gdg-x/hoverboard/blob/master/LICENSE.md).  
+Project is published under the [MIT license](https://github.com/gdg-x/realmapp/blob/master/LICENSE.md).  
 Feel free to clone and modify repo as you want, but don't forget to add reference to authors :)

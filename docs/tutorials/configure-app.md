@@ -1,6 +1,6 @@
 # Configure
 
-The most important file of configuration is `data/hoverboard.config.json`
+The most important file of configuration is `data/realmapp.config.json`
 which looks like:
 
 ```
@@ -86,7 +86,7 @@ window.ENV = 'dev';
 ```
 
 If you don't need some pages, don't forget to remove them (or comment out)
-in `hoverboard-app.html`
+in `realmapp-app.html`
 
 ```
 <neon-animated-pages attr-for-selected="name">

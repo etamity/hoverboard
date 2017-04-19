@@ -20,7 +20,7 @@ Or you may use [Docker container for development](docker.md)
         npm -v
         2.15.8
 
-1.  [Fork](https://github.com/gdg-x/hoverboard/fork) this repository
+1.  [Fork](https://github.com/gdg-x/realmapp/fork) this repository
 
 1.  Clone it locally.
 
