@@ -18,11 +18,16 @@
             isDrawerOpened: action.value !== null ? action.value : !state.ui.isDrawerOpened
           }
         });
+      default:
+        return initialState;
     }
   };
 
+
+
+  const reducers = Redux.combineReducers({reducer});
   const store = Redux.createStore(
-    reducer,
+    reducers,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
   const ReduxMixin = PolymerRedux(store);

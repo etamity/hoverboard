@@ -14,7 +14,9 @@
     "paper-icon-button": "PolymerElements/paper-icon-button#2.0-preview",
     "iron-image": "PolymerElements/iron-image#2.0-preview",
     "paper-tabs": "PolymerElements/paper-tabs#2.0-preview",
-    "polymer-redux": "tur-nr/polymer-redux#polymer-2"
+    "polymer-redux": "tur-nr/polymer-redux#polymer-2",
+    "app-storage": "^1.0.0",
+    "iron-lazy-pages": "^1.5.1"
   },
   "devDependencies": {
     "web-component-tester": "^6.0.0-prerelease.6"
