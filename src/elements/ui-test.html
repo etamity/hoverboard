@@ -1,0 +1,42 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="ui-test">
+  <template>
+    <app-localstorage-document key="session" data="{{session}}">
+    </app-localstorage-document>
+    <iron-lazy-pages selected="[[page]]"
+                     attr-for-selected="data-route">
+                       <template is="iron-lazy-page" data-route="web" path="realm-web.html">
+                            <realm-web></realm-web>
+                       </template>
+                       <template is="iron-lazy-page" data-route="dashboard" path="realm-dashboard.html">
+                            <realm-dashboard></realm-dashboard>
+                       </template>
+                     </iron-lazy-pages>
+  </template>
+
+  <script>
+
+    class UiTest extends Polymer.Element {
+
+      static get is() {
+        return 'ui-test';
+      }
+
+      constructor() {
+        super();
+        window.performance && performance.mark && performance.mark('realm-app.created');
+      }
+
+      ready() {
+        super.ready();
+        console.log('UiTest App is ready!');
+      }
+
+    }
+
+    customElements.define(UiTest.is, UiTest);
+
+  </script>
+
+</dom-module>
