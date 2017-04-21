@@ -16,7 +16,9 @@
     "paper-tabs": "PolymerElements/paper-tabs#2.0-preview",
     "polymer-redux": "tur-nr/polymer-redux#polymer-2",
     "app-storage": "^1.0.0",
-    "iron-pages": "PolymerElements/iron-pages#2.0-preview"
+    "iron-pages": "PolymerElements/iron-pages#2.0-preview",
+    "paper-progress": "PolymerElements/paper-progress#2.0-preview",
+    "lazy-imports": "^0.0.2"
   },
   "devDependencies": {
     "web-component-tester": "^6.0.0-prerelease.6"

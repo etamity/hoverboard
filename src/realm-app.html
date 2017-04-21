@@ -3,25 +3,25 @@
 <link rel="import" href="../bower_components/polymer/lib/utils/import-href.html">
 
 <link rel="import" href="../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
-<link rel="import" href="../bower_components/iron-lazy-pages/iron-lazy-pages.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/lazy-imports/lazy-imports.html">
+
 <dom-module id="realm-app">
+  <link rel="lazy-import" group="web" href="realm-web.html">
+  <link rel="lazy-import" group="dashboard" href="realm-dashboard.html">
   <template>
     <app-localstorage-document key="session" data="{{session}}">
     </app-localstorage-document>
-    <iron-lazy-pages selected="[[page]]"
+    <iron-pages selected="[[page]]"
                      attr-for-selected="data-route">
-                       <template is="iron-lazy-page" data-route="web" path="elements/ui-test.html">
-                            <realm-web></realm-web>
-                       </template>
-                       <template is="iron-lazy-page" data-route="dashboard" path="realm-dashboard.html">
-                            <realm-dashboard></realm-dashboard>
-                       </template>
-                     </iron-lazy-pages>
+                      <realm-web data-route="web"></realm-web>
+                      <realm-dashboard data-route="dashboard"></realm-dashboard>
+                     </iron-pages>
   </template>
 
   <script>
 
-    class RealmApp extends Polymer.Element {
+    class RealmApp extends Polymer.mixinBehaviors([Polymer.LazyImportsBehavior], Polymer.Element) {
 
       static get is() {
         return 'realm-app';
@@ -36,11 +36,10 @@
           },
           page: {
             type: String,
-            value: 'web'
+            value: 'dashboard'
           }
         };
       }
-
       constructor() {
         super();
         window.performance && performance.mark && performance.mark('realm-app.created');
@@ -48,17 +47,19 @@
 
       ready() {
         super.ready();
-        console.log('Realm App is ready!');
         this.removeAttribute('unresolved');
         this._ensureLazyLoaded();
       }
       _onSessionChanged(session) {
-        console.log(session);
-        if (session) {
-          this.set('page', 'dashboard');
-        } else {
-          this.set('page', 'web');
+        if (!this.loadComplete) {
+          return;
         }
+        if (this.session && this.session.isAdmin) {
+            this.page = 'dashboard';
+        } else {
+            this.page = 'web';
+        }
+        this.importLazyGroup(this.page);
       }
       _ensureLazyLoaded() {
         if (!this.loadComplete) {
@@ -67,6 +68,7 @@
               if ('serviceWorker' in navigator) {
                 navigator.serviceWorker.register('/service-worker.js');
               }
+              this.importLazyGroup(this.page);
               this.loadComplete = true;
             });
           });

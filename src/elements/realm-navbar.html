@@ -1,0 +1,137 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../bower_components/iron-media-query/iron-media-query.html">
+
+<link rel="import" href="./flex-layout-attr.html">
+<link rel="import" href="./realm-icons.html">
+<dom-module id="realm-navbar">
+<template>
+  <style include="shared-styles flex flex-alignment positioning"></style>
+  <style>
+    :host {
+      display: block;
+      --default-navbar-height: 64px;
+      height: var(--default-navbar-height);
+    }
+    app-toolbar {
+      padding: 36px 24px 24px;
+      border-bottom: 1px solid var(--divider-color);
+    }
+
+    app-header {
+      background-color: var(--primary-background-color);
+      border-bottom: 1px solid var(--divider-color);
+    }
+
+    app-toolbar {
+      padding: 0;
+      height: auto;
+    }
+
+    .toolbar-logo {
+      --iron-image-height: 32px;
+    }
+    .nav-item a {
+      padding: 0 14px;
+      color: var(--primary-text-color);
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 640px) {
+      app-toolbar {
+        padding: 0 36px;
+        height: initial;
+      }
+
+      .nav-items {
+        --paper-tabs-selection-bar-color: var(--default-primary-color);
+        --paper-tabs: {
+          height: var(--default-navbar-height);
+        };
+      }
+    }
+  </style>
+  <iron-media-query id="mq-phone"
+                    full
+                    query="(max-width: {$ mediaQueries.xs.max $})"
+                    query-matches="{{isPhoneSize}}"></iron-media-query>
+  <iron-media-query id="mq-tablet"
+                    full
+                    query="(min-width: {$ mediaQueries.sm.min $}) and (max-width: {$ mediaQueries.sm.max $})"
+                    query-matches="{{isTabletSize}}"></iron-media-query>
+  <iron-media-query id="mq-desktop"
+                    query="(min-width: {$ mediaQueries.md.min $})"
+                    query-matches="{{isDesktopSize}}"></iron-media-query>
+
+  <app-header-layout>
+    <app-header id="header" slot="header" effects="waterfall" condenses reveals>
+      <app-toolbar>
+        <paper-icon-button
+          icon="realm-icons:menu"
+          aria-label="Menu"
+          hidden$="[[!isPhoneSize]]"
+          on-tap="openDrawer">
+        </paper-icon-button>
+        <div layout horizontal center flex>
+          <a href="/" hidden$="[[isPhoneSize]]" layout horizontal>
+            <iron-image class="toolbar-logo" src="/images/logo.svg" alt="{$ title $}"></iron-image>
+          </a>
+        </div>
+
+        <paper-tabs
+          class="nav-items"
+          selected="[[routeData.page]]"
+          attr-for-selected="name"
+          hidden$="[[isPhoneSize]]"
+          role="navigation"
+          noink>
+          {% for nav in navigation %}
+          <paper-tab name="{$ nav.route $}" class="nav-item" link>
+            <a href="{$ nav.permalink $}" layout vertical center-center>{$ nav.title $}</a>
+          </paper-tab>
+          {% endfor %}
+        </paper-tabs>
+      </app-toolbar>
+    </app-header>
+  </app-header-layout>
+  </template>
+
+  <script>
+
+    class RealmNavbar extends ReduxMixin(Polymer.Element) {
+
+      static get is() {
+        return 'realm-navbar';
+      }
+
+      constructor() {
+        super();
+
+      }
+
+      ready() {
+        super.ready();
+        console.log('RealmNavbar App is ready!');
+
+      }
+
+      openDrawer() {
+        uiActions.toggleDrawer(true);
+      }
+
+      closeDrawer() {
+        uiActions.toggleDrawer(false);
+      }
+    }
+
+    customElements.define(RealmNavbar.is, RealmNavbar);
+
+  </script>
+
+</dom-module>
